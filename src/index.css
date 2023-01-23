@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    @apply text-gray-800 dark:text-gray-100;
+  }
+}
