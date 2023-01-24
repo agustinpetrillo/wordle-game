@@ -28,7 +28,7 @@ const Letter = ({ letterPosition, attemptValue }: Props) => {
 
   return (
     <div
-      className={`${letterState} flex items-center justify-center text-2xl font-bold bg-gray-700 text-gray-100 uppercase border-2 border-gray-900 w-14 h-14`}
+      className={`${letterState} flex items-center justify-center text-2xl font-bold bg-darkMode text-black dark:text-white uppercase border-2 border-lightMode dark:border-border w-14 h-14`}
     >
       {letter}
     </div>

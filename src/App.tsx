@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { UtilsContextType } from "../types";
 import Board from "./components/Board";
 import GameOver from "./components/GameOver";
+import Navbar from "./components/Navbar";
 import QwertyKeyboard from "./components/QwertyKeyboard";
 import { Utils } from "./utils/Utils";
 
@@ -23,8 +24,11 @@ function App() {
 
   return (
     <>
-      <Board />
-      {gameOver.gameOver ? <GameOver /> : <QwertyKeyboard />}
+      <div className="min-h-screen bg-white dark:bg-darkMmode">
+        <Navbar />
+        <Board />
+        {gameOver.gameOver ? <GameOver /> : <QwertyKeyboard />}
+      </div>
     </>
   );
 }

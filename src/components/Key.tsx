@@ -22,10 +22,10 @@ const Key = ({ keyValue, bigKey, disabled }: Props) => {
       <button
         className={`${
           bigKey
-            ? "w-[68px] text-gray-100 uppercase font-semibold text-sm bg-gray-500 rounded h-14 tracking-tight"
+            ? "w-[68px] text-[#252526] dark:text-white uppercase font-semibold text-sm bg-lightMode dark:bg-keyboard rounded h-14 tracking-tight"
             : disabled
-            ? "text-sm font-semibold text-gray-100 uppercase bg-gray-700 rounded h-14 w-11"
-            : "text-sm font-semibold text-gray-100 uppercase bg-gray-500 rounded h-14 w-11"
+            ? "text-sm font-semibold text-[#252526] dark:text-white uppercase bg-gray-700 dark:bg-keyboard rounded h-14 w-11"
+            : "text-sm font-semibold text-[#252526] dark:text-white uppercase bg-lightMode dark:bg-keyboard rounded h-14 w-11"
         }`}
         onClick={() => handleSelectedKey()}
       >

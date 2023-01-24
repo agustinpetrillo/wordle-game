@@ -45,10 +45,10 @@ const QwertyKeyboard = () => {
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center mt-2"
+        className="flex flex-col items-center justify-center bg-white dark:bg-darkMmode"
         onKeyDown={() => handleKeyboardTyping}
       >
-        <div className="flex items-center justify-center gap-1 mb-1">
+        <div className="flex items-center justify-center gap-2 mt-2 mb-2">
           {topKeyboardLine.map((key, keyIndex) => (
             <Key
               keyValue={key}
@@ -57,7 +57,7 @@ const QwertyKeyboard = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center gap-1 mb-1">
+        <div className="flex items-center justify-center gap-2 mb-2">
           {middleKeyboardLine.map((key, keyIndex) => (
             <Key
               keyValue={key}
@@ -66,7 +66,7 @@ const QwertyKeyboard = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center gap-1">
+        <div className="flex items-center justify-center gap-2">
           <Key keyValue="ENTER" bigKey={true} />
           {bottomKeyboardLine.map((key, keyIndex) => (
             <Key
