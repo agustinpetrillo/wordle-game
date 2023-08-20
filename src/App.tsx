@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { UtilsContextType } from "../types";
+import { UtilsContextType, WordData } from "../types";
 import Board from "./components/Board";
 import GameOver from "./components/GameOver";
 import Navbar from "./components/Navbar";
@@ -18,7 +18,7 @@ function App() {
           "https://gist.githubusercontent.com/agustinpetrillo/0ee6995afcdf9f32fc0c50fb7506391b/raw/08fc922677acb38b36f187a4647afaeda6a92985/words"
         );
         const data = await response.json();
-        setWordData((prevState) => ({
+        setWordData((prevState: WordData) => ({
           ...prevState,
           totalWords: new Set(data),
           correct: data[Math.floor(Math.random() * data.length)],

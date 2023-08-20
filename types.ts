@@ -26,7 +26,7 @@ export type UtilsContextType = {
   ) => Promise<{ totalWords: string; correct: string }>;
   disabledLetters: string[];
   wordData: WordData;
-  setWordData: (wordData: WordData) => void;
+  setWordData: (wordData: object) => void;
   setDisabledLetters: (disabledLetters: object) => void;
   gameOver: GameOver;
   setGameOver: (gameOver: GameOver) => void;
