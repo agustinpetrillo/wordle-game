@@ -7,13 +7,16 @@ import QwertyKeyboard from "./components/QwertyKeyboard";
 import { Utils } from "./utils/Utils";
 
 function App() {
-  const { gameOver, generateWordSet, refreshData, wordData, setWordData } =
-    useContext(Utils) as UtilsContextType;
+  const { gameOver, refreshData, setWordData } = useContext(
+    Utils
+  ) as UtilsContextType;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../../words.json");
+        const response = await fetch(
+          "https://gist.githubusercontent.com/agustinpetrillo/0ee6995afcdf9f32fc0c50fb7506391b/raw/08fc922677acb38b36f187a4647afaeda6a92985/words"
+        );
         const data = await response.json();
         setWordData((prevState) => ({
           ...prevState,
