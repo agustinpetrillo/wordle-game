@@ -8,14 +8,16 @@ type Props = {
 };
 
 const Letter = ({ letterPosition, attemptValue }: Props) => {
-  const { wordsData, setDisabledLetters, currentAttempt, correctWord } =
+  const { wordsData, setDisabledLetters, currentAttempt, wordData } =
     useContext(Utils) as UtilsContextType;
 
   const letter = wordsData[attemptValue][letterPosition];
 
-  const correct = correctWord.toLowerCase()[letterPosition] === letter;
+  const correct = wordData.correct.toLowerCase()[letterPosition] === letter;
   const almost =
-    !correct && letter !== "" && correctWord.toLowerCase().includes(letter);
+    !correct &&
+    letter !== "" &&
+    wordData.correct.toLowerCase().includes(letter);
   const letterState =
     currentAttempt.attempt > attemptValue &&
     (correct ? "!bg-correct" : almost ? "!bg-almost" : "bg-gray-700");

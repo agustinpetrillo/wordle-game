@@ -8,20 +8,28 @@ export type GameOver = {
   guessedWord: boolean;
 };
 
+export type WordData = {
+  totalWords: Set<string>;
+  correct: string;
+};
+
 export type UtilsContextType = {
   wordsData: string[][];
   setWordsData: (wordsData: string[][]) => void;
   currentAttempt: CurrentAttempt;
-  setCurrentAttempt: (currentAttempt: object) => void;
+  setCurrentAttempt: (currentAttempt: CurrentAttempt) => void;
   handleSelectedLetter: (keyValue: string) => void;
   handleDeletedLetter: () => void;
   handleEnteredWord: () => void;
-  correctWord: string;
-  generateWordSet: () => Promise<{ totalWords: string; correct: string }>;
+  generateWordSet: (
+    data: string[]
+  ) => Promise<{ totalWords: string; correct: string }>;
   disabledLetters: string[];
+  wordData: WordData;
+  setWordData: (wordData: WordData) => void;
   setDisabledLetters: (disabledLetters: object) => void;
   gameOver: GameOver;
-  setGameOver: (gameOver: object) => void;
+  setGameOver: (gameOver: GameOver) => void;
   wordSet: Set<string>;
   setWordSet: (wordSet: string) => void;
   setCorrectWord: (correctWord: string) => void;

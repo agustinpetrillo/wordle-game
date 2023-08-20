@@ -10,7 +10,7 @@ const GameOver = () => {
   const {
     gameOver,
     setCurrentAttempt,
-    correctWord,
+    wordData,
     setDisabledLetters,
     setGameOver,
     setWordsData,
@@ -46,7 +46,9 @@ const GameOver = () => {
           {gameOver.guessedWord ? "You Guess!" : "You Lost!"}
         </h3>
         <p>The correct word was:</p>
-        <h1 className="mb-3 text-4xl font-semibold uppercase">{correctWord}</h1>
+        <h1 className="mb-3 text-4xl font-semibold uppercase">
+          {wordData.correct}
+        </h1>
         <button
           onClick={() => handlePlayAgain()}
           className="px-12 py-4 text-white bg-gray-600 rounded"
